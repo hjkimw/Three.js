@@ -114,6 +114,7 @@ function App() {
         <div style={{ background: "blue" }} onClick={handleClick}></div>
         <div style={{ background: "red" }} onClick={handleClick}></div>
         <div style={{ background: "green" }} onClick={handleClick}></div>
+        <div style={{ background: "transparent" }} onClick={handleClick}></div>
       </article>
 
       <Canvas

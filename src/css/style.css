@@ -27,6 +27,7 @@ figure {
     z-index: 2; }
     figure .colorPicker > div {
       width: 50px;
-      height: 50px; }
+      height: 50px;
+      border: 1px solid #fff; }
 
 /*# sourceMappingURL=style.css.map */
