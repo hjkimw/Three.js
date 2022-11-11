@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACQ,uIAA+H;ACDvI,CAAE;EACD,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;;AAEvB;;EAEG;EACF,UAAU,EAAE,IAAI;;AAEjB,CAAE;EACD,eAAe,EAAE,IAAI;;ADRtB,MAAO;EACL,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,IAAI;EAChB,QAAQ,EAAE,MAAM;EAChB,QAAQ,EAAE,QAAQ",
+"sources": ["../scss/style.scss","../scss/_reset.scss"],
+"names": [],
+"file": "style.css"
+}
