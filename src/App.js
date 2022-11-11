@@ -1,16 +1,9 @@
 import "./scss/style.scss";
-import {
-  Canvas,
-  useFrame,
-  extend,
-  useThree,
-  useLoader,
-} from "react-three-fiber";
+import { Canvas, useFrame, useLoader } from "react-three-fiber";
 //Suspense: 리액트 컴포넌트 안쪽에서 비동기로 실행되는 구문을 동기화
 import { useRef, Suspense } from "react";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as THREE from "three";
-extend({ OrbitControls });
+import Orbit from "./components/Orbit";
 
 const handlePointerDown = (e) => {
   // 클릭한 object에 active key값을 만들고 true값을 저장!!
@@ -46,11 +39,6 @@ const scaleDown = (object) => {
   object.scale.x = 1;
   object.scale.y = 1;
   object.scale.z = 1;
-};
-
-const Orbit = () => {
-  const { camera, gl } = useThree();
-  return <orbitControls args={[camera, gl.domElement]} />;
 };
 
 const Bulb = (props) => {
