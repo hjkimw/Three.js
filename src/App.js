@@ -1,9 +1,18 @@
 import "./scss/style.scss";
-import { Canvas } from "react-three-fiber";
+import { Canvas, useFrame } from "react-three-fiber";
+import { useRef } from "react";
 
 const Box = () => {
+  const ref = useRef(null); // Box참조
+
+  // 1초마다 프레임 렌더링하며 useFrame을 활용해 모션을 구현한다.
+  useFrame(() => {
+    ref.current.rotation.x += 0.01;
+    ref.current.rotation.y += 0.01;
+  });
+
   return (
-    <mesh>
+    <mesh ref={ref}>
       {/* 정육면체 도형 가져오기 */}
       <boxBufferGeometry />
       {/* 기본 색상 지정 */}
