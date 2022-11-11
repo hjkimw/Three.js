@@ -13,19 +13,17 @@ function Dragable(props) {
     setChildren(groupRef.current.children);
   }, []);
 
-  // 자식요소인 Box컴포넌트가 실제 Dragable컴포넌트에 담기는 순간 호버 이벤트 연결!!
+  //자식 요소인 Box컴포넌트가 실제 Dragable컴포넌트에 담기는 순간 호버 이벤트 연결
   useEffect(() => {
     controlRef.current.addEventListener("hoveron", (e) => {
-      console.log(scene.__objects);
-      // 요소 hover시 scene에서 orbit기능을 false를 대입해 비활성화
+      console.log(scene);
+      //요소에 호버시 씬에서의 orbit기능을 false로 비활성화
       scene.__objects[0].enabled = false;
-      //   console.log(scene.__objects[0].enabled);
     });
 
     controlRef.current.addEventListener("hoveroff", (e) => {
-      // 요소 hover시 scene에서 orbit기능을 false를 대입해 비활성화
+      //요소에 호버시 씬에서의 orbit기능을 true로 다시 활성화
       scene.__objects[0].enabled = true;
-      //   console.log(scene.__objects[0].enabled);
     });
   }, [Children]);
 

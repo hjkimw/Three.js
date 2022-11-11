@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cob
+* source:	https://sketchfab.com/3d-models/cob-8a555ce7382c4c55b798f4cf7b9cae0c
+* author:	luyssport (https://sketchfab.com/luyssport)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cob" (https://sketchfab.com/3d-models/cob-8a555ce7382c4c55b798f4cf7b9cae0c) by luyssport (https://sketchfab.com/luyssport) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
