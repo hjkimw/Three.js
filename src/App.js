@@ -22,14 +22,16 @@ function App() {
 
         <ambientLight intensity={0.2} />
 
-        {/* <Dragable> */}
-        {/* 광원 */}
-        <Bulb position={[30, 200, 0]} />
+        <Dragable>
+          {/* 광원 */}
+          <Bulb position={[30, 200, 0]} />
+          <Bulb position={[30, 200, 0]} />
+          <Bulb position={[30, 200, 0]} />
+        </Dragable>
         <Suspense fallback={null}>
           {/* Model불러오기 */}
           <Model path={`${process.env.PUBLIC_URL}lotus_elise/scene.gltf`} />
         </Suspense>
-        {/* </Dragable> */}
       </Canvas>
     </figure>
   );

@@ -8,6 +8,8 @@ const Model = (props) => {
       object={model.scene}
       scale={new Array(3).fill(50)}
       postition={[0, -3, 0]}
+      // 회전값 1 === 90deg
+      rotation-y={4.5}
     />
   );
 };
