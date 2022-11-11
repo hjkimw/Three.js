@@ -4,25 +4,8 @@ import { Suspense } from "react";
 import * as THREE from "three";
 import Orbit from "./components/Orbit";
 import Box from "./components/Box";
-
-const Bulb = (props) => {
-  return (
-    <mesh {...props}>
-      <pointLight castShadow intensity={1} color="white" />
-      <sphereBufferGeometry args={[0.5, 20, 20]} />
-      <meshPhongMaterial emissive="yellow" />
-    </mesh>
-  );
-};
-
-const Floor = (props) => {
-  return (
-    <mesh {...props} receiveShadow>
-      <boxBufferGeometry args={[20, 1, 10]} />
-      <meshPhysicalMaterial color="white" />
-    </mesh>
-  );
-};
+import Floor from "./components/Floor";
+import Bulb from "./components/Bulb";
 
 function App() {
   const handleClick = (e) => {
