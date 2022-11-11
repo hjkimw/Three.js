@@ -1,22 +1,30 @@
 import "./scss/style.scss";
-import Orbit from "./components/Orbit";
-import { Canvas, extend } from "react-three-fiber";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-extend({ OrbitControls });
+import { Canvas } from "react-three-fiber";
+
+const Box = () => {
+  return (
+    <mesh>
+      {/* 정육면체 도형 가져오기 */}
+      <boxBufferGeometry />
+      {/* 기본 색상 지정 */}
+      <meshBasicMaterial color="blue" />
+    </mesh>
+  );
+};
 
 function App() {
   return (
     <figure>
       <Canvas
-        shadowMap
         style={{ background: "#111" }}
         // 카메라 시점 x, y, z
         camera={{ position: [7, 7, 7] }}
       >
-        {/* 궤도 Orbit */}
-        <Orbit />
-        {/* 시점을 보여주는 axesHelper */}
+        {/* 축 기준점 가이드 */}
         <axesHelper args={[6]} />
+
+        {/* Object */}
+        <Box />
       </Canvas>
     </figure>
   );
