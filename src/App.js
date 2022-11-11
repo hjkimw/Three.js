@@ -6,6 +6,7 @@ import Box from "./components/Box";
 import Floor from "./components/Floor";
 import Bulb from "./components/Bulb";
 import ColorPicker from "./components/ColorPicker";
+import Dragable from "./components/Dragable";
 
 function App() {
   return (
@@ -21,12 +22,15 @@ function App() {
 
         <ambientLight intensity={0.2} />
         <Bulb position={[0, 3, 0]} />
-        <Suspense fallback={null}>
-          <Box position={[-2, 1, 0]} />
-        </Suspense>
-        <Suspense fallback={null}>
-          <Box position={[2, 1, 0]} />
-        </Suspense>
+        {/* 드래그하고 싶은 요소를 Dragable컴포넌트로 감싸줌 */}
+        <Dragable>
+          <Suspense fallback={null}>
+            <Box position={[-2, 1, 0]} />
+          </Suspense>
+          <Suspense fallback={null}>
+            <Box position={[2, 1, 0]} />
+          </Suspense>
+        </Dragable>
         <Floor position={[0, -0.5, 0]} />
       </Canvas>
     </figure>
