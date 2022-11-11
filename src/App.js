@@ -10,7 +10,7 @@ const Orbit = () => {
   return <orbitControls args={[camera, gl.domElement]} />;
 };
 
-const Box = () => {
+const Box = (props) => {
   const ref = useRef(null); // Box참조
 
   // 1초마다 프레임 렌더링하며 useFrame을 활용해 모션을 구현한다.
@@ -21,7 +21,9 @@ const Box = () => {
   });
 
   return (
-    <mesh ref={ref}>
+    // 전달된 props를 rest parameter를 이용해서 한꺼번에 "모두 적용"
+    <mesh ref={ref} {...props}>
+      
       {/* 정육면체 도형 가져오기 */}
       <boxBufferGeometry />
 
@@ -45,8 +47,9 @@ function App() {
         {/* 마우스 드래그로 시점을 컨트롤 할 수 있게함 */}
         <Orbit />
 
-        {/* Object */}
-        <Box />
+        {/* Box컴포넌트 호출시 위치값을 Props로 전달 */}
+        {/* mesh의 position 속성에 배열로 값(x, y, z)로 위치 이동시킬 수 있다. */}
+        <Box position={[0, 2, 0]} />
       </Canvas>
     </figure>
   );
