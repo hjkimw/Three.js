@@ -15,6 +15,10 @@ extend({ OrbitControls });
 const handlePointerDown = (e) => {
   // 클릭한 object에 active key값을 만들고 true값을 저장!!
   e.object.active = true;
+  if (window.activeMesh) {
+    scaleDown(window.activeMesh);
+    window.activeMesh.active = false;
+  }
   console.log(e.object);
   //해당 정보값을 다시 window 전역객체에 activeMesh속성을 만들고 옮겨담음!
   window.activeMesh = e.object;
@@ -36,6 +40,12 @@ const handlePointerLeave = (e) => {
     e.object.scale.y = 1;
     e.object.scale.z = 1;
   }
+};
+
+const scaleDown = (object) => {
+  object.scale.x = 1;
+  object.scale.y = 1;
+  object.scale.z = 1;
 };
 
 const Orbit = () => {
