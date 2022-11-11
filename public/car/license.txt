@@ -1,0 +1,11 @@
+Model Information:
+* title:	cHe
+* source:	https://sketchfab.com/3d-models/che-1e529f4b8efc4f20925957a9a4208dcd
+* author:	luyssport (https://sketchfab.com/luyssport)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "cHe" (https://sketchfab.com/3d-models/che-1e529f4b8efc4f20925957a9a4208dcd) by luyssport (https://sketchfab.com/luyssport) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
