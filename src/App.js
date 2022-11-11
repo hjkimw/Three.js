@@ -13,7 +13,12 @@ import * as THREE from "three";
 extend({ OrbitControls });
 
 const handlePointerDown = (e) => {
-  console.log(e);
+  // 클릭한 object에 active key값을 만들고 true값을 저장!!
+  e.object.active = true;
+  console.log(e.object);
+  //해당 정보값을 다시 window 전역객체에 activeMesh속성을 만들고 옮겨담음!
+  window.activeMesh = e.object;
+  console.log(window);
 };
 
 const handlePointerEnter = (e) => {
@@ -23,9 +28,14 @@ const handlePointerEnter = (e) => {
 };
 
 const handlePointerLeave = (e) => {
-  e.object.scale.x = 1;
-  e.object.scale.y = 1;
-  e.object.scale.z = 1;
+  // 해당 object를 클릭해서 active키값이 true가 아닐때만 동작
+  // 그냥 호버시에는 커지고 작아지지만 한번이라도 클릭하면 아래 조건식에 의해서
+  // mouseLeave이벤트는 발생하되 작아지지 않음
+  if (!e.object.active) {
+    e.object.scale.x = 1;
+    e.object.scale.y = 1;
+    e.object.scale.z = 1;
+  }
 };
 
 const Orbit = () => {
@@ -92,7 +102,10 @@ function App() {
         <ambientLight intensity={0.2} />
         <Bulb position={[0, 3, 0]} />
         <Suspense fallback={null}>
-          <Box position={[-1, 2, 1]} />
+          <Box position={[-2, 1, 0]} />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Box position={[-1, 1, 2]} />
         </Suspense>
         <Floor position={[0, -0.5, 0]} />
       </Canvas>
